@@ -1,19 +1,21 @@
-import 'api_config.dart';
-import 'user/user_controller_config.dart';
+import 'package:ridesafe_api/user/user_repository_controller_config.dart';
+import 'package:ridesafe_core/user/user.dart';
+
+import 'server_config.dart';
 
 class Api {
-  late ApiConfig _config;
+  late ServerConfig _config;
 
   Api.initialize() {
-    _config = ApiConfig();
+    _config = ServerConfig();
   }
 
-  UserController get user => _config.userController;
+  UserRepositoryControllerConfig get user => _config.userController;
 }
 
 // usage
 
-// final api = Api.initialize();
+final api = Api.initialize();
 
-// final User some = api.user.create(UserRequest('username'));
-// final User finds = api.user.getById(id);
+final User some = api.user.server.create('username');
+final User finds = api.user.server.getById('someID');

@@ -197,6 +197,13 @@ packages:
       relative: false
     source: path
     version: "1.0.0"
+  ridesafe_local_database_impl:
+    dependency: "direct main"
+    description:
+      path: "D:/dev/ridesafe/ridesafe_local_database_impl"
+      relative: false
+    source: path
+    version: "1.0.0"
   shelf:
     dependency: transitive
     description:

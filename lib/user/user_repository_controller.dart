@@ -5,18 +5,18 @@ import 'package:ridesafe_core/user/get/get_user_by_username_interactor.dart';
 import 'package:ridesafe_core/user/user.dart';
 import 'package:ridesafe_core/user/user_request.dart';
 
-class UserController {
+class UserRepositoryController {
   final CreateUserInteractor _createUserInteractor;
   final GetUserByUsernameInteractor _getUserByUsernameInteractor;
   final GetUserByIdInteractor _getUserByByIdInteractor;
 
-  UserController(UserRepository repository)
+  UserRepositoryController(UserRepository repository)
       : _createUserInteractor = CreateUserInteractor(repository),
         _getUserByUsernameInteractor = GetUserByUsernameInteractor(repository),
         _getUserByByIdInteractor = GetUserByIdInteractor(repository);
 
-  User create(UserRequest request) {
-    return _createUserInteractor.create(request);
+  User create(String username) {
+    return _createUserInteractor.create(UserRequest(username));
   }
 
   User getById(String id) {
