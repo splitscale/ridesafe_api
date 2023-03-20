@@ -1,21 +1,35 @@
 import 'package:ridesafe_api/user/user_repository_controller_config.dart';
-import 'package:ridesafe_core/user/user.dart';
 
 import 'server_config.dart';
 
 class Api {
-  late ServerConfig _config;
+  static late ServerConfig _config;
 
-  Api.initialize() {
+  static void initialize() {
     _config = ServerConfig();
   }
 
-  UserRepositoryControllerConfig get user => _config.userController;
+  static UserRepositoryControllerConfig get userController =>
+      _config.userController;
 }
 
 // usage
 
-final api = Api.initialize();
+// main() {
+//   // initialize the controller
+//   Api.initialize();
+// }
 
-final User some = api.user.server.create('username');
-final User finds = api.user.server.getById('someID');
+// server() {
+//   final UserRepositoryController db = Api.userController.server;
+
+//   final User some = db.create('username');
+//   final User finds = db.getById('someID');
+// }
+
+// local() {
+//   final UserRepositoryController db = Api.userController.local;
+
+//   final User some = db.create('username');
+//   final User finds = db.getById('someID');
+// }
