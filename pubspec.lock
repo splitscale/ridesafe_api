@@ -263,7 +263,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: fb72c1df41277a4d0cc6a12b434764627eec3700
+      resolved-ref: "5aa5d71a2e2d520b7f236e7328bce8a3b0a1330d"
       url: "https://github.com/splitscale/ridesafe_bluetooth_impl.git"
     source: git
     version: "1.0.0"
