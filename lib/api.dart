@@ -1,16 +1,22 @@
-import 'package:ridesafe_api/user/user_repository_controller_config.dart';
+import 'package:ridesafe_api/device/device_service_controller.dart';
+import 'package:ridesafe_api/user/user_repository_controller_switcher.dart';
 
-import 'server_config.dart';
+import 'api_endpoints.dart';
 
 class Api {
-  static late ServerConfig _config;
+  static late ApiEndpoints _endpoints;
 
   static void initialize() {
-    _config = ServerConfig();
+    _endpoints = ApiEndpoints();
   }
 
-  static UserRepositoryControllerConfig get userController =>
-      _config.userController;
+  static UserRepositoryControllerSwitcher get user {
+    return _endpoints.userController;
+  }
+
+  static DeviceServiceController get bluetooth {
+    return _endpoints.deviceController;
+  }
 }
 
 // usage
