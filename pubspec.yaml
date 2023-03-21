@@ -9,21 +9,18 @@ environment:
 # dependencies:
 #   path: ^1.8.0
 
-# TODO: add core as a dependency here
-
-# dependencies:
-#   core: ^1.8.0
-#     path: ../ridesafe_core
-
 dependencies:
   ridesafe_core:
-    path: D:/dev/ridesafe/ridesafe_core
+    git: https://github.com/splitscale/ridesafe_core.git
 
   ridesafe_cloud_database_impl:
-    path: D:/dev/ridesafe/ridesafe_cloud_database_impl
+    git: https://github.com/splitscale/ridesafe_cloud_database_impl.git
 
   ridesafe_local_database_impl:
-    path: D:/dev/ridesafe/ridesafe_local_database_impl
+    git: https://github.com/splitscale/ridesafe_local_database_impl.git
+
+  ridesafe_bluetooth_impl:
+    git: https://github.com/splitscale/ridesafe_bluetooth_impl.git
 
 dev_dependencies:
   lints: ^2.0.0
