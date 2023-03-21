@@ -1,16 +1,17 @@
-import 'package:ridesafe_api/user/user_repository_controller_config.dart';
+import 'package:ridesafe_api/user/user_repository_controller_switcher.dart';
 
-import 'server_config.dart';
+import 'api_endpoints.dart';
 
 class Api {
-  static late ServerConfig _config;
+  static late ApiEndpoints _config;
 
   static void initialize() {
-    _config = ServerConfig();
+    _config = ApiEndpoints();
   }
 
-  static UserRepositoryControllerConfig get userController =>
-      _config.userController;
+  static UserRepositoryControllerSwitcher get userController {
+    return _config.userController;
+  }
 }
 
 // usage
