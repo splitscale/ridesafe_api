@@ -9,8 +9,8 @@ import 'package:ridesafe_core/device/scan/device_scanning_interactor.dart';
 import 'package:ridesafe_core/device/service_state/device_service_state_interactor.dart';
 import 'package:ridesafe_core/services/device_service.dart';
 
-class DeviceServiceController<R1> {
-  final ConnectDeviceInteractor _connectDevice;
+class DeviceServiceController<R1, CONN> {
+  final ConnectDeviceInteractor<R1, CONN> _connectDevice;
   final DeviceEnableServiceInteractor _enableService;
   final OpenDeviceInternalSettingsInteractor _openSettings;
   final DevicePairedInteractor _pairedDevices;
@@ -18,7 +18,7 @@ class DeviceServiceController<R1> {
   final DeviceScanningInteractor _deviceScanning;
   final DeviceServiceStateInteractor _deviceService;
 
-  DeviceServiceController(DeviceService service)
+  DeviceServiceController(DeviceService<R1, CONN> service)
       : _connectDevice = ConnectDeviceInteractor(service),
         _enableService = DeviceEnableServiceInteractor(service),
         _openSettings = OpenDeviceInternalSettingsInteractor(service),
@@ -27,7 +27,7 @@ class DeviceServiceController<R1> {
         _deviceScanning = DeviceScanningInteractor(service),
         _deviceService = DeviceServiceStateInteractor(service);
 
-  Future<ConnectedDevice> connect(Device device) async {
+  Future<ConnectedDevice<CONN>> connect(Device device) async {
     return await _connectDevice.connect(device);
   }
 
