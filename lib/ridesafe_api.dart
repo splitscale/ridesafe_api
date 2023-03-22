@@ -9,7 +9,7 @@ import 'device/connected_device_service_controller.dart';
 class Ridesafe {
   static late ApiEndpoints _endpoints;
 
-  static void initialize() {
+  static Future<void> initialize() async {
     _endpoints = ApiEndpoints();
   }
 
