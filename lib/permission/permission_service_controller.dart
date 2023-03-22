@@ -4,7 +4,7 @@ import 'package:ridesafe_permission_impl/types/bluetooth_permissions.dart';
 
 class PermissionServiceController {
   final PermissionRequestInteractor<BluetoothPermissionMap> _requestInteractor;
-  final PermissionStateInteractor<Future<BluetoothPermission>> _stateInteractor;
+  final PermissionStateInteractor<BluetoothPermission> _stateInteractor;
 
   PermissionServiceController(this._requestInteractor, this._stateInteractor);
 
@@ -12,7 +12,7 @@ class PermissionServiceController {
     return await _requestInteractor.request();
   }
 
-  Future<BluetoothPermission> get status async {
+  BluetoothPermission get status {
     return _stateInteractor.status;
   }
 }
