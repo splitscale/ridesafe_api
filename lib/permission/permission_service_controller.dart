@@ -3,7 +3,7 @@ import 'package:ridesafe_core/permission/state/permission_state_interactor.dart'
 import 'package:ridesafe_permission_impl/types/bluetooth_permissions.dart';
 
 export 'package:ridesafe_permission_impl/types/bluetooth_permissions.dart'
-    show BluetoothPermissionMap, BluetoothPermission;
+    show BluetoothPermissionMap, BluetoothPermission, Permission;
 
 class PermissionServiceController {
   final PermissionRequestInteractor<BluetoothPermissionMap> _requestInteractor;
