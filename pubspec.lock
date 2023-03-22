@@ -323,7 +323,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "080a040445d51cfcb101ace4d87c7a86ce7a3eed"
+      resolved-ref: "17bad6e6cd5082e3fa241d6365f6815d975624cb"
       url: "https://github.com/splitscale/ridesafe_core.git"
     source: git
     version: "1.0.0"
@@ -341,7 +341,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: ec849c18d48ce8a831b32d4e973cab6f53c4dc2f
+      resolved-ref: d852d7c74d6a0b8f027e680db835ec7a2c93ff10
       url: "https://github.com/splitscale/ridesafe_permission_impl.git"
     source: git
     version: "1.0.0"
