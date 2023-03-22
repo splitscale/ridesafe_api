@@ -15,7 +15,8 @@ class Ridesafe {
     return _endpoints.userController;
   }
 
-  static DeviceServiceController get bluetooth {
+  static DeviceServiceController<Future<BluetoothState>, BluetoothConnection>
+      get bluetooth {
     return _endpoints.deviceController;
   }
 
