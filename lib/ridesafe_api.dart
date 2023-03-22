@@ -9,8 +9,17 @@ import 'device/connected_device_service_controller.dart';
 class Ridesafe {
   static late ApiEndpoints _endpoints;
 
+  static final Ridesafe _instance = Ridesafe._(); // singleton instance
+
+  factory Ridesafe() {
+    return _instance;
+  }
+
+  Ridesafe._(); // private constructor
+
   static Future<void> initialize() async {
     _endpoints = ApiEndpoints();
+    // perform any other initialization tasks here
   }
 
   static UserRepositoryControllerSwitcher get user {
