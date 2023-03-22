@@ -323,7 +323,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: d728e63c26f736ae66c7bec71d37efc1a0ce8b24
+      resolved-ref: bd00110633eb6bd5cf423e8b3bc97196b65a1576
       url: "https://github.com/splitscale/ridesafe_core.git"
     source: git
     version: "1.0.0"
