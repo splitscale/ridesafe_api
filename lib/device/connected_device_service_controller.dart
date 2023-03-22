@@ -4,13 +4,13 @@ import 'package:ridesafe_core/connected_device/send/connected_device_send_intera
 import 'package:ridesafe_core/connected_device/state/connected_device_state_interactor.dart';
 import 'package:ridesafe_core/services/connected_device_service.dart';
 
-class ConnectedDeviceController {
+class ConnectedDeviceServiceController {
   final ConnectDeviceListenInteractor _listenInteractor;
   final ConnectDeviceSendInteractor _sendInteractor;
   final ConnectDeviceStateInteractor _stateInteractor;
   final ConnectDeviceDisconnectInteractor _disconnectInteractor;
 
-  ConnectedDeviceController(ConnectedDeviceService service)
+  ConnectedDeviceServiceController(ConnectedDeviceService service)
       : _listenInteractor = ConnectDeviceListenInteractor(service),
         _sendInteractor = ConnectDeviceSendInteractor(service),
         _stateInteractor = ConnectDeviceStateInteractor(service),
