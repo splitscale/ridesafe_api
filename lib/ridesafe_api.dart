@@ -1,4 +1,5 @@
 import 'package:ridesafe_api/device/device_service_controller.dart';
+import 'package:ridesafe_api/permission/permission_service_controller.dart';
 import 'package:ridesafe_api/user/user_repository_controller_switcher.dart';
 
 import 'api_endpoints.dart';
@@ -16,6 +17,10 @@ class Ridesafe {
 
   static DeviceServiceController get bluetooth {
     return _endpoints.deviceController;
+  }
+
+  static PermissionServiceController get permissions {
+    return _endpoints.permissionController;
   }
 }
 

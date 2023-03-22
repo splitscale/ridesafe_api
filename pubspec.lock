@@ -244,6 +244,48 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.3"
+  permission_handler:
+    dependency: transitive
+    description:
+      name: permission_handler
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "10.2.0"
+  permission_handler_android:
+    dependency: transitive
+    description:
+      name: permission_handler_android
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "10.2.0"
+  permission_handler_apple:
+    dependency: transitive
+    description:
+      name: permission_handler_apple
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "9.0.7"
+  permission_handler_platform_interface:
+    dependency: transitive
+    description:
+      name: permission_handler_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.9.0"
+  permission_handler_windows:
+    dependency: transitive
+    description:
+      name: permission_handler_windows
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.2"
+  plugin_platform_interface:
+    dependency: transitive
+    description:
+      name: plugin_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.4"
   pool:
     dependency: transitive
     description:
@@ -263,7 +305,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "5aa5d71a2e2d520b7f236e7328bce8a3b0a1330d"
+      resolved-ref: "0517cceefc71a6d4a38a2ee4d5fd8c9c5107f221"
       url: "https://github.com/splitscale/ridesafe_bluetooth_impl.git"
     source: git
     version: "1.0.0"
@@ -281,7 +323,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: c88c4c630396770945fe0114211ab0001c2a266f
+      resolved-ref: "4e9287dafd0e79811c7f153acc0ee7f17bb0fac3"
       url: "https://github.com/splitscale/ridesafe_core.git"
     source: git
     version: "1.0.0"
@@ -292,6 +334,15 @@ packages:
       ref: HEAD
       resolved-ref: "3c44c4d1b4cc26c10a1e370530d3fb987ee81b67"
       url: "https://github.com/splitscale/ridesafe_local_database_impl.git"
+    source: git
+    version: "1.0.0"
+  ridesafe_permission_impl:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "35c9d14b98efda345b768dbc76de927cf7ad64fe"
+      url: "https://github.com/splitscale/ridesafe_permission_impl.git"
     source: git
     version: "1.0.0"
   shelf:
@@ -455,4 +506,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=2.18.6 <3.0.0"
-  flutter: ">=1.17.0"
+  flutter: ">=2.8.0"

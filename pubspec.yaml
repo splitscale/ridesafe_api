@@ -22,6 +22,9 @@ dependencies:
   ridesafe_bluetooth_impl:
     git: https://github.com/splitscale/ridesafe_bluetooth_impl.git
 
+  ridesafe_permission_impl:
+    git: https://github.com/splitscale/ridesafe_permission_impl.git
+
 dev_dependencies:
   lints: ^2.0.0
   test: ^1.16.0

@@ -8,9 +8,8 @@ import 'package:ridesafe_core/device/pairing/device_pairing_interactor.dart';
 import 'package:ridesafe_core/device/scan/device_scanning_interactor.dart';
 import 'package:ridesafe_core/device/service_state/device_service_state_interactor.dart';
 import 'package:ridesafe_core/services/device_service.dart';
-import 'package:ridesafe_core/services/state/service_state.dart';
 
-class DeviceServiceController {
+class DeviceServiceController<R1> {
   final ConnectDeviceInteractor _connectDevice;
   final DeviceEnableServiceInteractor _enableService;
   final OpenDeviceInternalSettingsInteractor _openSettings;
@@ -68,7 +67,7 @@ class DeviceServiceController {
     return _deviceService.isServiceEnabled();
   }
 
-  Future<ServiceStatus> getServiceState() {
+  R1 getServiceState() {
     return _deviceService.getServiceState();
   }
 }
