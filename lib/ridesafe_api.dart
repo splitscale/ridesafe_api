@@ -7,8 +7,8 @@ import 'api_endpoints.dart';
 class Ridesafe {
   static late ApiEndpoints _endpoints;
 
-  static void initialize() {
-    _endpoints = ApiEndpoints();
+  static Future<void> initialize() async {
+    _endpoints = await Future(() => ApiEndpoints());
   }
 
   static UserRepositoryControllerSwitcher get user {
