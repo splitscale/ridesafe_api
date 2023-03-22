@@ -7,6 +7,9 @@ import 'package:ridesafe_core/permission/request/permission_request_interactor.d
 import 'package:ridesafe_core/permission/state/permission_state_interactor.dart';
 import 'package:ridesafe_permission_impl/services/bluetooth_permission_service.dart';
 
+export 'package:ridesafe_bluetooth_impl/types/bluetooth_utility_types.dart'
+    show BluetoothState, BluetoothConnection;
+
 class ApiEndpoints {
   final UserRepositoryControllerSwitcher _userRepositorySwitcher;
   final DeviceServiceController<Future<BluetoothState>, BluetoothConnection>
