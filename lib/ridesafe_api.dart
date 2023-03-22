@@ -3,7 +3,7 @@ import 'package:ridesafe_api/user/user_repository_controller_switcher.dart';
 
 import 'api_endpoints.dart';
 
-class Api {
+class Ridesafe {
   static late ApiEndpoints _endpoints;
 
   static void initialize() {
