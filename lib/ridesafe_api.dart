@@ -7,26 +7,24 @@ import 'api_endpoints.dart';
 import 'device/connected_device_service_controller.dart';
 
 class Ridesafe {
-  static late ApiEndpoints _endpoints;
+  final ApiEndpoints _endpoints;
 
-  static void initialize() {
-    _endpoints = ApiEndpoints();
-  }
+  Ridesafe(this._endpoints);
 
-  static UserRepositoryControllerSwitcher get user {
+  UserRepositoryControllerSwitcher get user {
     return _endpoints.userController;
   }
 
-  static DeviceServiceController<Future<BluetoothState>, BluetoothConnection>
+  DeviceServiceController<Future<BluetoothState>, BluetoothConnection>
       get bluetooth {
     return _endpoints.deviceController;
   }
 
-  static PermissionServiceController get permissions {
+  PermissionServiceController get permissions {
     return _endpoints.permissionController;
   }
 
-  static ConnectedDeviceServiceController getConnectedDeviceController(
+  ConnectedDeviceServiceController getConnectedDeviceController(
       ConnectedDevice<BluetoothConnection> connectedDevice) {
     return _endpoints.getConnectedDeviceController(connectedDevice);
   }
