@@ -6,10 +6,10 @@ import 'package:ridesafe_core/connected_device/connected_device.dart';
 import 'api_endpoints.dart';
 import 'device/connected_device_service_controller.dart';
 
-class Ridesafe {
+class RidesafeController {
   final ApiEndpoints _endpoints;
 
-  Ridesafe(this._endpoints);
+  RidesafeController(this._endpoints);
 
   UserRepositoryControllerSwitcher get user {
     return _endpoints.userController;
@@ -29,24 +29,3 @@ class Ridesafe {
     return _endpoints.getConnectedDeviceController(connectedDevice);
   }
 }
-
-// usage
-
-// main() {
-//   // initialize the controller
-//   Api.initialize();
-// }
-
-// server() {
-//   final UserRepositoryController db = Api.userController.server;
-
-//   final User some = db.create('username');
-//   final User finds = db.getById('someID');
-// }
-
-// local() {
-//   final UserRepositoryController db = Api.userController.local;
-
-//   final User some = db.create('username');
-//   final User finds = db.getById('someID');
-// }
